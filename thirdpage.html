@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>KHAANSAMAA</title>
+<script>
+//     function Menu_Toggle()
+//     {
+//         var x = document.getElementById("menu_second_row");
+//         var y = document.getElementById("vm_button");
+//         if (x.style.display === "none") 
+//         {
+//             x.style.display = "block";
+//             y.style.display = "none";
+
+//         } 
+//         else 
+//         {
+//             x.style.display = "none";
+//             y.style.display = "block";
+//         }
+//     }
+//     function ShowMenu()
+//     {
+//         var x = document.getElementById("menu_div");
+//         var y = document.getElementById("about_div");
+//         var z = document.getElementById("budget_div");
+//         x.style.display = "block";
+//         y.style.display = "none";
+//         z.style.display = "none";
+//     }
+//     function ShowAbout()
+//     {
+//         var x = document.getElementById("menu_div");
+//         var y = document.getElementById("about_div");
+//         var z = document.getElementById("budget_div");
+//         x.style.display = "none";
+//         y.style.display = "block";
+//         z.style.display = "none";
+//     }
+//     function ShowBudget()
+//     {
+//         var x = document.getElementById("menu_div");
+//         var y = document.getElementById("about_div");
+//         var z = document.getElementById("budget_div");
+//         x.style.display = "none";
+//         y.style.display = "none";
+//         z.style.display = "block";
+//     }
+// </script>
+  <script type="text/javascript">
+    function findTotal(){
+        var arr = document.getElementsByName('quantity');
+        var tot=0;
+        for(var i=0;i<arr.length;i++){
+            if(parseInt(arr[i].value))
+                tot += parseInt(arr[i].value);
+        }
+        document.getElementById('total').value = tot;
+    }
+    
+        </script>
+</head>
+<body>
+    <nav class="topnav">
+        <div style="display: inline-block;width: 17.5%;" class="header">
+            <img src="UI Design (IAD)\images\black-2516434_1920.jpg"/>
+            <h1>KHAANSAMAA</h1>
+        </div>
+        <div class="decoration">
+        <button style="margin-left: 5%;" href="#home" onclick="window.location.href='Mainpage.html'">HOME</button>
+        <button style="margin-left: 5%;" href="#about" onclick="window.location.href='secondpage.html'">SHOPS</button>
+        <button style="margin-left: 5%;" href="#contact" onclick="document.getElementById('contact_div').scrollIntoView()">CONTACT</button>
+      </div>
+    </nav>
+    <div>
+        <img src="UI Design (IAD)\images\salad-1264107_960_720.jpg" class="platter3"/>
+        <div id="Toggler" class="centered3">
+            <button id="menu_btn" v-on:click="ShowMenu">MENU</button>
+            <button id="about_btn" v-on:click="ShowAbout">ABOUT</button>
+            <button v-on:click="ShowBudget"id="budget_btn" >BUDGET</button>
+        </div>
+    </div>
+    <div id="menu_div" style="margin-top: 10%;margin-bottom: 20%;display: block;">
+        <h1 style="color: orangered;font-family: Halant;text-align: center;font-weight: 900;font-size: 3vw;">SHOP MENU</h1>
+        <hr style="border: 1px solid #0A0908; text-align: center;width: 19%;">
+        <div style="display: inline-flex;width: 100%;margin-top: 5%;">
+            <video width="700" height="400" controls style="margin-left: 10%;border-radius: 30px;">
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                <embed src="E:\movies\Malang.2020.BRRip.mkv"/>
+                Your browser does not support the video tag.
+            </video>
+            <div style="width: 30%;margin-left: 5%; ">
+                <h1 style="color: orangered;font-size: 3.25vw;font-family: Halant;font-weight: 900;width: 75%;">Delivering Top Quality Food</h1>
+                <p style="font-size: 1.5vw;letter-spacing: 1px;word-spacing: 4px;width: 80%;padding-top: 7.5%;">We will maintain integrity in everything we do,continue to grow and expand to meet the demands of our customers, excel through industry, leadership and with the competative market.</p>
+            </div>
+        </div>
+        <div>
+            <div style="margin-top: 3%;max-height: 25%;height: 300px;width: 100%;margin-left: 2.5%;">
+                <img src="UI Design (IAD)\images\shreyak-singh-0j4bisyPo3M-unsplash.jpg" style="height: 100%;width: 25%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;"/>
+                <img src="UI Design (IAD)\images\KORMA-1400x919-7b02c527-02dd-4f57-aac0-fdbb1ea2e993-0-1400x919.jpg" style="height: 100%;width: 25%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;"/>
+                <img src="UI Design (IAD)\images\Spicy-Chicken-Curry-Scrambled-Chefs-3-scaled-735x1102.jpg" style="height: 100%;width: 25%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;"/>
+            </div>
+            <div style="margin-top: 2%;max-height: 25%;height: 50px;width: 100%;display: inline-flex;">
+                <h1 style="margin-left: 9%;font-weight: 900;font-family: Halant;font-size: 3vw;color: #0A0908;">Mutton Biryani</h1>
+                <h1 style="margin-left: 8%;font-weight: 900;font-family: Halant;font-size: 3vw;color: #0A0908;">Chicken Korma</h1>
+                <h1 style="margin-left: 8%;font-weight: 900;font-family: Halant;font-size: 3vw;color: #0A0908;">Chicken Karahi</h1>
+            </div>
+            <div style="margin-top: 1%;max-height: 25%;height: 50px;width: 100%;display: inline-flex;">
+                <p style="font-size: 0.90vw;max-width: 40%;width: 300px;margin-left: 9%;">A hearty mutton biryani that will amaze your guests! ... It has a host of spices and herbs such as anise,bay leaves,cardamom,cinnamon,cloves,jaiphal,javitri along with chillies,rose water,kewda and saffron cooked with succulent mutton pieces.</p>
+                <p style="font-size: 0.90vw;max-width: 40%;width: 300px;margin-left: 8%;">Chicken Korma is a gravy dish that is usually made with yogurt, lots of nuts and spices. A Mughal era original, Chicken Korma is the perfect dinner party dish and have no excuse to refuse.</p>
+                <p style="font-size: 0.90vw;max-width: 40%;width: 300px;margin-left: 8%;">Chicken Karahi is a spicy, homestyle chicken curry with fragrant spices and fresh ginger.It is a dish known for its spicy taste; it is notable in North Indian and Pakistani cuisine.The dish is prepared in a karahi.</p>
+            </div>
+        </div>
+        <div id="menu_second_row" class="menu_second_row" style="margin-top: 5%;display: none;">
+            <div style="margin-top: 3%;max-height: 25%;height: 300px;width: 100%;margin-left: 2.5%;">
+                <img src="UI Design (IAD)\images\victoria-priessnitz-6emA9ibUaq4-unsplash.jpg" style="height: 100%;width: 25%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;"/>
+                <img src="UI Design (IAD)\images\videoalternate_videoalternate-1588630999.jpg" style="height: 100%;width: 25%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;"/>
+                <img src="UI Design (IAD)\images\577cb0275f1aa.jpg" style="height: 100%;width: 25%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;"/>
+            </div>
+            <div style="margin-top: 2%;max-height: 25%;height: 50px;width: 100%;display: inline-flex;margin-left: 5%;">
+                <h1 style="margin-left: 9%;font-weight: 900;font-family: Halant;font-size: 3vw;color: #0A0908;">Fish Fry</h1>
+                <h1 style="margin-left: 15%;font-weight: 900;font-family: Halant;font-size: 3vw;color: #0A0908;">Chicken Tikka</h1>
+                <h1 style="margin-left: 15%;font-weight: 900;font-family: Halant;font-size: 3vw;color: #0A0908;">Kheer</h1>
+            </div>
+            <div style="margin-top: 1%;max-height: 25%;height: 50px;width: 100%;display: inline-flex;">
+                <p style="font-size: 0.90vw;max-width: 40%;width: 300px;margin-left: 9%;">This delicious, crispy & spicy fish fry makes for a great appetizer or a side to a meal. A simple vegetable sala or sliced onion compliment the fish fry. It can be served as a side with any variety rice like Ghee rice, cumin or Jeera rice, simple coconut rice.</p>
+                <p style="font-size: 0.90vw;max-width: 40%;width: 300px;margin-left: 8%;">Chicken Tikka masala is a dish of chunks of roasted marinated chicken (Chicken Tikka) in a spiced curry. Its origin is disputed. The curry is usually creamy and orange-coloured. It is among the United Kindgom's most popular dishes.</p>
+                <p style="font-size: 0.90vw;max-width: 40%;width: 300px;margin-left: 8%;">Kheer, a chilled South Asian dessert made from slow-cooked rice, milk and sugar, much like a rice pudding. It is typically flavoured with saffron, cardamom, raisins, and/or varoius nuts, notably pistachios, cashews, and almonds.</p>
+            </div>
+            <button id="close_menu_button" class="btn" v-on:click="menu_toggle">CLOSE</button>
+        </div>
+        <button id="viewmore_button" v-on:click="menu_toggle" class="btn" style="background-color:#F76926;color: #F5F9E9;margin-left: 41.5%;margin-top: 5%;font-size: 2vw;font-weight: 800;padding-top: 1%;font-family:'Halant',serif;letter-spacing: 0.5px;word-spacing: 2px;width: 20%;height: 25%;border-radius: 40px;">VIEW MORE</button>
+    </div>
+    <div id="about_div" style="margin-top: 10%;margin-bottom: 120%;display: none;">
+        <h1 style="color: orangered;font-family: Halant;text-align: center;font-weight: 900;font-size: 3vw;">ABOUT SHOP</h1>
+        <hr style="border: 1px solid #0A0908; text-align: center;width: 19%;">
+        <div style="margin-top: 5%;float: left;width: 60%;height: 40%;background-color: rgb(28, 28, 28);">
+            <h1 style="color: #F5F9E9;text-align: center;font-size: 3vw;font-family: Halant;padding-top: 2%;">FOUNDING</h1>
+            <p style="color: #F5F9E9;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 1.55vw;padding-top: 2%;margin-left: 10%;margin-right: 15%;margin-bottom: 15%;">Owais Baba Pakwan house, was founded by Owais Sheikh in 1983. He started this catering service from his own house which later expanded to a shop and now he runs a whole Pakwan center along with his two sons in which they offer variety of qualityfood service. Their aim is to market their Pakwan House through digital platform to provide great services to their respectable customers.</p>
+        </div>
+        <div style="background-color: rgb(247,105,38,0.8);width: 50%;height: 120%;position: absolute;left: 50%;top: 140%;">
+            <h1 style="color: #F5F9E9;text-align: center;font-size: 3vw;font-family: Halant;padding-top: 2%;">HOW IT WORKS</h1>
+            <h2 style="color: #F5F9E9;margin-left: 5%;font-family: Halant;"><u>You Order From The Menu</u></h2>
+            <p style="color: #F5F9E9;margin-left: 5%;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: left;font-size: 1.5vw;margin-right: 40%;">Our menu contains a variety of dishes, which can be served to your guests.You just have to pick dishes and maintain your cart as per your budget. In case of any We Confirm & Make Your problem just call us to the given number.</p>
+            <h2 style="color: #F5F9E9;margin-left: 50%;font-family: Halant;"><u>We Confirm & Make Your Deal</u></h2>
+            <p style="color: #F5F9E9;margin-left: 50%;width: 50%;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: left;font-size: 1.5vw;">We confirmed your order as per your request and make sure to deliver our best on the required time.</p>
+            <h2 style="color: #F5F9E9;margin-left: 5%;font-family: Halant;"><u>We Deliver</u></h2>
+            <p style="color: #F5F9E9;margin-left: 5%;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: left;font-size: 1.5vw;margin-right: 50%;">We deliver the best and on time handing of your goods and will make sure that you will love our service.</p>
+        </div>
+        <div style="background-color: rgba(10, 9, 8, 0.8);width: 75%;height: 80%;position: absolute;top: 250%;margin-left: 10%;">
+            <div style="display: inline-flex;">
+                <div style="margin-left: 5%;">
+                    <h1 style="font-family: Halant;color: #F5F9E9;margin-left: 15%;padding-top: 5%;">OUR MISSION</h1>
+                    <p style="color: #F5F9E9;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left: 3%;font-size: 1.5vw;width: 80%;">This platform is a catalyst for anybody which allows you to make your budget without going any where.</p>
+                </div>
+                <div style="margin-left: 5%;">
+                    <h1 style="font-family: Halant;color: #F5F9E9;margin-left: 15%;padding-top: 5%;">OUR PROMISE</h1>
+                    <p style="color: #F5F9E9;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left: 5%;font-size: 1.5vw;width: 75%;">We promise to deliver optimistic and diverse range of food delivery with maintaining the quality of every good.</p>
+                </div>
+            </div>
+            <div style="display: inline-flex;margin-top: 5%;">
+                <div style="margin-left: 5%;">
+                    <h1 style="font-family: Halant;color: #F5F9E9;margin-left: 15%;padding-top: 5%;">OUR ESSENCE</h1>
+                    <p style="color: #F5F9E9;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left: 3%;font-size: 1.5vw;width: 80%;">At our core, we operates only with the best cooks and labours, try to full fill your imagination, individually.</p>
+                </div>
+                <div style="margin-left: 3%;">
+                    <h1 style="font-family: Halant;color: #F5F9E9;margin-left: 17.5%;padding-top: 5%;">OUR VIBE</h1>
+                    <p style="color: #F5F9E9;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left: 3.5%;font-size: 1.5vw;width: 75%;">At our Center, we make magic, we dream it, and then do it-together-every day reinventing what possible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="budget_div" style="margin-top: 10%;margin-bottom: 1%;display: none;">
+        <h1 style="color: orangered;font-family: Halant;text-align: center;font-weight: 900;font-size: 3vw;">CREATE YOUR BUDGET</h1>
+        <hr style="border: 1px solid #0A0908; text-align: center;width: 33%;">
+        <hr style="border: 1px solid #0A0908; text-align: center;width: 90%;margin-top: 5%;">
+        <div style="display: inline-flex;width: 100%;height: 900px;max-height: 80%;">
+        <div style="width: 50%;">
+            <h1 style="font-family: Halant;color: #F76926;margin-left: 5%;margin-top: 5%;">ADD DISHES TO YOUR CART</h1>
+            <button style="background-color:#F76926;color: #F5F9E9;border: 0px solid transparent;margin-left: 5%;margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 40%;height: 100px;max-height: 4%;border-radius: 40px;">Mutton Biryani
+            <input type="checkbox" style="margin-left: 2%;"/>
+            </button>
+            <br>
+            <button style="background-color:#F76926;color: #F5F9E9;border: 0px solid transparent;margin-left: 5%;margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 40%;height: 100px;max-height: 4%;border-radius: 40px;">Chicken Korma
+            <input type="checkbox" style="margin-left: 2%;"/>
+            </button>
+            <br>
+            <button style="background-color:#F76926;color: #F5F9E9;border: 0px solid transparent;margin-left: 5%;margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 40%;height: 100px;max-height: 4%;border-radius: 40px;">Chicken Karahi
+            <input type="checkbox" style="margin-left: 2%;"/>
+            </button>
+            <br>
+            <button style="background-color:#F76926;color: #F5F9E9;border: 0px solid transparent;margin-left: 5%;margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 40%;height: 100px;max-height: 4%;border-radius: 40px;">Fish Fry
+            <input type="checkbox" style="margin-left: 34%;"/>
+            </button>
+            <br>
+            <button style="background-color:#F76926;color: #F5F9E9;border: 0px solid transparent;margin-left: 5%;margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 40%;height: 100px;max-height: 4%;border-radius: 40px;">Chicken Tikka
+            <input type="checkbox" style="margin-left: 6%;"/>
+            </button>
+            <br>
+            <button style="background-color:#F76926;color: #F5F9E9;border: 0px solid transparent;margin-left: 5%;margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 40%;height: 100px;max-height: 4%;border-radius: 40px;">Kheer
+            <input type="checkbox" style="margin-left: 40%;"/>
+            </button>
+        </div>
+        <div style="width: 50%;float: right;">
+            <h1 style="font-family: Halant;color: #F76926;margin-left: 52%;margin-top: 5%;">QUANTITY</h1>
+            <input type="number" style="margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 30%;height: 100px;max-height: 4%;border-radius: 40px;margin-left: 50%;text-align: center;" name="quantity"/>
+            <br>
+            <input  onblur="findTotal()" type="number" style="margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 30%;height: 100px;max-height: 4%;border-radius: 40px;margin-left: 50%;text-align: center;"name="quantity"/>
+            <br>
+            <input  onblur="findTotal()" type="number" style="margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 30%;height: 100px;max-height: 4%;border-radius: 40px;margin-left: 50%;text-align: center;" name="quantity"/>
+            <br>
+            <input  onblur="findTotal()" type="number" style="margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 30%;height: 100px;max-height: 4%;border-radius: 40px;margin-left: 50%;text-align: center;" name="quantity"/>
+            <br>
+            <input onblur="findTotal()" type="number" style="margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 30%;height: 100px;max-height: 4%;border-radius: 40px;margin-left: 50%;text-align: center;" name="quantity"/>
+            <br>
+            <input  onblur="findTotal()" type="number" style="margin-top: 7%;font-size: 1.85vw;font-weight: 400;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 30%;height: 100px;max-height: 4%;border-radius: 40px;margin-left: 50%;text-align: center;" name="quantity"/>
+            <br>
+            <div style="display: inline-flex;margin-top: 10%;width: 100%;height: 20%;">
+                <h1 style="color: #F76926;font-family: Halant;margin-top: 6%;margin-left: 22%;font-size: 3.5vw;">TOTAL</h1>
+                <input type="text" readonly style="width: 40%;height: 30%;border-radius: 40px;margin-left: 7.5%;margin-top: 5%;font-size: 3vw;color: #0A0908;text-align: center;" name="Total" id="total"/>
+                <button type="text" readonly style="width: 40%;height: 30%;border-radius: 40px;margin-left: 7.5%;margin-top: 5%;font-size: 1vw;color: #0A0908;text-align: center; background-color: #F76926;"data-toggle="modal" data-target="#myModal">Order Now</button>
+            </div>
+          
+            
+        </div>
+    </div>
+    <hr style="border: 1px solid #0A0908; text-align: center;width: 95%;margin-top: 2%;">
+    <img src="UI Design (IAD)/images/black-2516434_1920.jpg" style="height: 60%;width: 30%;top: 145%;left: 35%;position: absolute;opacity: 50%;border-radius: 250px;"/>
+    <div style="margin-top: 2%;background-color: rgba(10, 9, 8, 0.8);width: 60%;max-height: 50%;height: 550px;">
+    <h1 style="color: #F5F9E9;font-family: Halant;font-size: 3vw;margin-left: 5%;padding-top: 5%;"><u>GUIDELINES</u></h1>
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 2vw;color: #F5F9E9;margin-left: 5%;font-weight: 100;margin-top: 5%;">-Add dishes to your cart by selecting dishes.</p>
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 2vw;color: #F5F9E9;margin-left: 5%;font-weight: 100;margin-top: 5%;">-Select quantity of your guests.</p>
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 2vw;color: #F5F9E9;margin-left: 5%;font-weight: 100;margin-top: 5%;">-Add/Subtract the quantity or dishes as per your budget.</p>
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 2vw;color: #F5F9E9;margin-left: 5%;font-weight: 100;margin-top: 5%;">-Get the total as per your desire.</p>
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 2vw;color: #F5F9E9;margin-left: 5%;font-weight: 100;margin-top: 5%;">-Contact us to the given number and get your order done.</p>
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>Your Order has been recieved</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+    <script>
+        var vm = new Vue(
+        {
+            el: "#viewmore_button",
+            data:{},
+            methods: 
+            {
+                menu_toggle : function()
+                {
+                    var x = document.getElementById("menu_second_row");
+                    var y = document.getElementById("viewmore_button");
+                    if (x.style.display === "none") 
+                    {
+                        x.style.display = "block";
+                        y.style.display = "none";
+
+                    } 
+                    else 
+                    {
+                        x.style.display = "none";
+                        y.style.display = "block";
+                    }        
+                }
+            }
+        });
+        var c = new Vue(
+        {   
+            el: "#close_menu_button",
+            data:{},
+            methods:
+            {
+                menu_toggle : function()
+                {
+                    var x = document.getElementById("menu_second_row");
+                    var y = document.getElementById("viewmore_button");
+                    if (x.style.display === "none") 
+                    {
+                        x.style.display = "block";
+                        y.style.display = "none";
+
+                    } 
+                    else 
+                    {
+                        x.style.display = "none";
+                        y.style.display = "block";
+                    }        
+                }
+            }
+        });
+        var t = new Vue(
+        {
+            el: "#menu_btn",
+            data:{},
+            methods: 
+            {
+                ShowMenu : function()
+                {
+                    var x = document.getElementById("menu_div");
+                    var y = document.getElementById("about_div");
+                    var z = document.getElementById("budget_div");
+                    x.style.display = "block";
+                    y.style.display = "none";
+                    z.style.display = "none";
+                },
+            }
+        });
+        var x = new Vue(
+        {
+            el: "#about_btn",
+            data:{},
+            methods: 
+            {
+                ShowAbout : function()
+                {
+                    var x = document.getElementById("menu_div");
+                    var y = document.getElementById("about_div");
+                    var z = document.getElementById("budget_div");
+                    x.style.display = "none";
+                    y.style.display = "block";
+                    z.style.display = "none";
+                },
+            }
+        });
+        var y = new Vue(
+        {
+            el: "#budget_btn",
+            data:{},
+            methods: 
+            {
+                ShowBudget : function()
+                {
+                    var x = document.getElementById("menu_div");
+                    var y = document.getElementById("about_div");
+                    var z = document.getElementById("budget_div");
+                    x.style.display = "none";
+                    y.style.display = "none";
+                    z.style.display = "block";
+                }
+            }
+        });
+    </script> 
+    <div id="contact_div" class="footer" style="display: inline-block;">
+        <p style="color: ivory;font-size: 1.25vw;padding-top: 5%;margin-left: 2%;word-spacing: 1px;letter-spacing: 1px;width: 40%;">copyrights - KHAANSAMAA - All Rights Reserved</p>
+        <div style="float: right;width: 20%;height: 100%;margin-top: -7.5%;text-align: center;">
+            <h2 style="font-family: Halant;">CONTACT US</h2>
+            <img src="UI Design (IAD)/icons/iconfinder_square-facebook_317727.png" style="height: 25%;width: 15%;border-radius: 5px;margin-top: -5%;"/>
+            <img src="UI Design (IAD)/icons/iconfinder_2_social_2609552.png" style="height: 25%;width: 15%;border-radius: 5px;margin-top: -5%;"/>
+            <img src="UI Design (IAD)/icons/iconfinder_25_social_2609558.png" style="height: 25%;width: 15%;border-radius: 5px;margin-top: -5%;"/>
+            <img src="UI Design (IAD)/icons/iconfinder_social_media_applications_23-whatsapp_4102606.png" style="height: 25%;width: 15%;border-radius: 5px;margin-top: -5%;"/>
+            <h4 style="font-family: Halant;">03102454056</h4>
+            <h4 style="font-family: Halant;">khaansamaa@gmail.com</h4>
+        </div> 
+    </div>
+</body>

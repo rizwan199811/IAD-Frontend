@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>KHAANSAMAA</title>
+<script>
+    /*function dropdown_Toggle()
+    {
+        var x = document.getElementById("drop_down");
+        if (x.style.display === "none") 
+        {
+            x.style.display = "block";
+
+        } 
+        else 
+        {
+            x.style.display = "none";
+
+        }
+    }*/
+</script>
+</head>
+<body>
+    <nav class="topnav">
+        <div style="display: inline-block;width: 17.5%;" class="header">
+            <img src="UI Design (IAD)\images\black-2516434_1920.jpg" >
+            <h1>KHAANSAMAA</h1>
+        </div>
+        <div class="decoration">
+            <button style="margin-left: 5%;" href="#home" onclick="window.location.href='file:///E:/IAD%20Project/Mainpage.html'">HOME</button>
+                <button id="menu_btn" style="margin-left: 5%;"  href="#menu" v-on:click="drop_down_toggle">MENU
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            <button style="margin-left: 5%;" href="#contact" onclick="document.getElementById('contact_div').scrollIntoView()">CONTACT</button>
+        </div>
+    </nav>
+    <div style="height: 30%;width: 100%;margin-bottom: 20%;">
+        <img src="UI Design (IAD)\images\debby-hudson-UDmOdHwxB3g-unsplash.jpg" class="platter2"/>
+        <div style="transform: translate(-50,-50);top: 15%;left: 2%;position: absolute;width: 97.5%;">
+            <input class="input-field" type="text"  style="max-height: 10%;height: 50px;width: 250px;max-width: 20%;border-color: white;color: white;background-color:transparent;margin-left: 3.5%;border-radius: 40px;text-align: center;font-family: Haliant;font-size: 1.5vw;" placeholder="Search here"/>    
+            <button type="submit" class="btn" style="border-radius: 30px;height: 5%;width:3%;background-color: transparent;font-size: 2vw;"><i class="fa fa-search" style="color: white;"></i></button>
+            <div id="drop_down" class="dd" style="width:21%;max-height: 20%;height: 35px;background-color:transparent;float: right;display: none;position: fixed;margin-left: 72%;margin-top: -6.05%;z-index: 4;">
+            <button style="height: 100%;width: 33.5%;background-color: black;color: silver;border: 1%;border-color: silver;margin: 0%;font-family: Halant;text-align: center;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" onclick="document.getElementById('catering_div').scrollIntoView()">CATERING</button>
+            <button style="height: 100%;width: 33.5%;background-color: black;color: silver;border: 1%;border-color: silver;margin-left: -2%;font-family: Halant;text-align: center;" onclick="document.getElementById('sweets_div').scrollIntoView()">SWEETS</button>
+            <button style="height: 100%;width: 33.5%;background-color: black;color: silver;border: 1% ;border-color: silver;margin-left: -2%;font-family: Halant;text-align: center;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">ADD</button>
+            </div>
+            <script>
+                    var vm = new Vue(
+                    {
+                        el: "#menu_btn",
+                        data:{},
+                        methods: 
+                        {
+                            drop_down_toggle : function()
+                            {
+                                var x = document.getElementById("drop_down");
+                                if (x.style.display === "none") 
+                                {
+                                    x.style.display = "block";
+
+                                } 
+                                else 
+                                {
+                                    x.style.display = "none";
+
+                                }        
+                            }
+                        }
+                    });
+            </script>
+            <h1 id='catering_div' style="color: white;margin-top: 10%;font-family: Halant;font-size: 3vw;margin-left: 35%;">CATERING SERVICES</h1>
+            <div style="margin-top: 10%;max-height: 25%;height: 250px;width: 95%;margin-left: 5%;">
+                <img src="UI Design (IAD)\images\pakwan1.jpg" style="height: 100%;width: 20%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;" onclick="window.location.href='file:///E:/IAD%20Project/thirdpage.html'"/>
+                <img src="UI Design (IAD)\images\15823715_209702899491430_1630135748268292734_n-1-500x500.jpg" style="height: 100%;width: 20%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;"/>
+                <img src="UI Design (IAD)\images\unnamed.jpg" style="height: 100%;width: 20%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;"/>
+                <label style="margin-left: 5%;color:gray;vertical-align: bottom;"><u>View More</u></label>
+            </div>
+            <div style="margin-top: 2%;max-height: 25%;height: 50px;width: 100%;">
+                <label style="margin-left: 13%;" onclick="window.location.href='thirdpage.html'"><u>Owais Baba Pakwan House</u></label>
+                <label style="margin-left: 12%;"><u>Tasty Pakwan Center</u></label>
+                <label style="margin-left: 12%;"><u>Ejaz Pakwan House</u></label>
+            </div>
+        </div>
+    </div>
+    <div style="height: 30%;width: 100%;margin-bottom: 20%;;">
+        <img src="UI Design (IAD)\images\annie-spratt-R3LcfTvcGWY-unsplash.jpg" style="max-height: 30%;height: 500px;width: 80%;margin-left: 10%;border-radius: 100px;"/>
+        <div style="transform: translate(-50,-50);top: 150%;left: 7%;position: absolute;width: 97.5%;">
+            <h1 id='sweets_div' style="color: white;margin-top: 5%;font-family: Halant;font-size: 3vw;margin-left: 38%;width: 50%;">SWEETS</h1>
+            <div style="margin-top: 15%;max-height: 25%;height: 250px;width: 95%;">
+                <img src="UI Design (IAD)\images\e01c7d778b8dca719ce0101fa3aac13f.jpg" style="height: 100%;width: 20%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;"/>
+                <img src="UI Design (IAD)\images\50584726_10157138173395039_4916896260021026816_o.jpg" style="height: 100%;width: 20%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;"/>
+                <img src="UI Design (IAD)\images\17952856_1200863283344461_2185905163689124856_n.jpg" style="height: 100%;width: 20%;margin-left: 5%;border-top-right-radius:75px;border-bottom-left-radius: 75px;"/>
+                <label style="margin-left: 5%;color:orangered;vertical-align: bottom;"><u>View More</u></label>
+            </div>
+            <div style="margin-top: 2%;max-height: 25%;height: 50px;width: 95%;">
+                <label style="margin-left: 10%;"><u>Agha Juice</u></label>
+                <label style="margin-left: 20%;"><u>Baskin Robbins</u></label>
+                <label style="margin-left: 13%;"><u>Alpine Gelato Icecream Parlour</u></label>
+            </div>
+        </div>
+    </div>
+    <div id='contact_div' class="footer" style="display: inline-block;">
+        <p style="color: ivory;font-size: 1.25vw;padding-top: 5%;margin-left: 2%;word-spacing: 1px;letter-spacing: 1px;width: 40%;">copyrights - KHAANSAMAA - All Rights Reserved</p>
+        <div style="float: right;width: 20%;height: 100%;margin-top: -7.5%;text-align: center;">
+            <h2 style="font-family: Halant;">CONTACT US</h2>
+            <img src="UI Design (IAD)/icons/iconfinder_square-facebook_317727.png" style="height: 25%;width: 15%;border-radius: 5px;margin-top: -5%;"/>
+            <img src="UI Design (IAD)/icons/iconfinder_2_social_2609552.png" style="height: 25%;width: 15%;border-radius: 5px;margin-top: -5%;"/>
+            <img src="UI Design (IAD)/icons/iconfinder_25_social_2609558.png" style="height: 25%;width: 15%;border-radius: 5px;margin-top: -5%;"/>
+            <img src="UI Design (IAD)/icons/iconfinder_social_media_applications_23-whatsapp_4102606.png" style="height: 25%;width: 15%;border-radius: 5px;margin-top: -5%;"/>
+            <h4 style="font-family: Halant;">03102454056</h4>
+            <h4 style="font-family: Halant;">khaansamaa@gmail.com</h4>
+        </div> 
+    </div>
+</body>
+</html>

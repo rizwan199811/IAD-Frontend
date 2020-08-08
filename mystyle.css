@@ -1,0 +1,307 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(28, 28, 28);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+  }
+  
+  .topnav label.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .header img {
+      float: left;
+      width: 22.5%;
+      height: 22.5%;
+      background: #555;
+      margin-top: 2%;
+      margin-left: 5%;
+      border-radius: 50%;
+  }
+
+  .header h1 { 
+      margin-left: 35%;
+      font-family: 'Halant',serif;
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: 2.2vw;
+      color: #F5F9E9;
+  }
+  .decoration
+  {
+    float: right;
+    padding-top: 1.5%;
+    width: 30%;
+    height: 50%;
+  }
+  .decoration button
+  {
+      font-size: 1.75vw;
+      color: #F5F9E9;
+      font-family: 'Times New Roman', Times, serif;
+      background-color: transparent;
+      border-color: transparent;
+      border-radius: 4px;
+      border-style: groove;
+      margin-top: -2%;    
+  }
+  .decoration button:hover {
+    border-color: #0A0908;
+    background-color: #F76926;
+  }
+  .centered {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100%;
+    height: 40%;
+  }
+  .centered3 {
+    position: absolute;
+    top: 55%;
+    left: 42.5%;
+    transform: translate(-50%, -50%); 
+    width: 50%;
+    height: 10%;
+    display: inline-flex;
+  }
+  .centered3 button
+  {
+    margin-left: 5%;          
+    font-size: 4.5vw;
+    letter-spacing: 2px;
+    color: #F5F9E9;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    background-color: transparent;
+    border: 0px solid transparent;
+    
+  }
+  .centered h1
+  {
+    margin-left: 7%;          
+    font-size: 3vw;
+    word-spacing: 15px;
+    letter-spacing: 2px;
+    color: #F5F9E9;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+  }
+  .centered p
+  {
+    padding-left: 33.5%;          
+    font-size: 2.5vw;
+    letter-spacing: 1px;
+    color: #F5F9E9;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .centered button
+  {
+    background-color:#F76926;
+    color: #F5F9E9;
+    margin-left: 41.5%;
+    margin-top: 4%;
+    font-size: 2vw;
+    font-weight: 800;
+    padding-top: 1%;
+    font-family:'Halant',serif;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    width: 20%;
+    height: 25%;
+    border-radius: 40px;
+  }
+  .platter
+  {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    border-bottom-right-radius: 250px;
+    border-bottom-left-radius: 100px;
+  }
+  .platter2
+  {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 565px;
+    position: relative;
+    border-bottom-right-radius: 300px;
+    border-bottom-left-radius: 100px;
+  }
+  .platter3
+  {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 450px;
+    position: relative;
+    border-bottom-right-radius: 400px;
+  }
+  .pic1
+  {
+    width: 25%;
+    height: 500px;
+    max-height: 90%;
+    float: right;
+    margin-right: -5%;
+    margin-top: 10%;
+    position: relative;
+  }
+  .pic2
+  {
+    width: 54%;
+    height: 72%;
+    position: absolute;
+    top: 30%;
+    left: 17%;
+  }
+  .half-circle1 
+  {
+    width: 22.5%;
+    height: 100%;
+    background-color:#F76926;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    border-left: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .half-circle2 
+  {
+    width: 12%;
+    height: 50%;
+    background-color:#F76926;
+    border-bottom-left-radius: 300px;
+    border-top-left-radius: 300px;
+    border-right: 0;
+    float: right;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .footer 
+  {
+    max-height: none;
+    height: 150px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0A0908;
+    color: ivory;
+  }
+  .menu_second_row button
+  {
+    background-color:#F76926;
+    color: #F5F9E9;
+    margin-left: 41.5%;
+    margin-top: 5%;
+    font-size: 2vw;
+    font-weight: 800;
+    padding-top: 1%;
+    font-family:'Halant',serif;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    width: 20%;
+    height: 25%;
+    border-radius: 40px;
+  }
+  .dd button:hover
+  {
+    background-color: silver;
+    color: #0A0908;
+    border-color: #0A0908;
+  }
+  @media only screen and (max-width: 400px)
+  {
+    .header img
+    {
+      float: left;
+      width: 50%;
+      height: 50%;
+      background: #555;
+      margin-top: 3%;
+      margin-left: 5%;
+      border-radius: 50%;
+    }
+    .header h1
+    {
+      margin-left: 70%;
+      font-family: 'Halant',serif;
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: 2.2vw;
+      color: #F5F9E9;   
+    }
+    .decoration
+    {
+      width: 42%;
+      margin-top: 1.5%;
+    }
+    .centered h1
+    {
+      letter-spacing: 0;
+      word-spacing: 10px;
+      padding-left: 5%;
+    }
+    .centered p
+    {
+      padding-left: 28%;
+    }
+    .centered button
+    {
+    margin-left: 30%;
+    margin-top: 4%;
+    font-size: 3vw;
+    font-weight: 800;
+    padding-top: 1%;
+    font-family:'Halant',serif;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    width: 40%;
+    height: 25%;
+    border-radius: 40px;
+    }
+    .half-circle1 
+    {
+    width: 50%;
+    height: 80%;
+    background-color:#F76926;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    border-left: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    .half-circle2 
+    {
+    width: 12%;
+    height: 50%;
+    background-color:#F76926;
+    border-bottom-left-radius: 300px;
+    border-top-left-radius: 300px;
+    border-right: 0;
+    float: right;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    
+  }
